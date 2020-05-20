@@ -111,9 +111,4 @@ export const styles = StyleSheet.create({
         fontSize: 11,
         color: '#3c003c'
     },
-
-
-
-
-
   });
