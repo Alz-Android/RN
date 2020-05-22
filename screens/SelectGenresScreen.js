@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { CheckBox, Text, View, ImageBackground, TouchableOpacity} from 'react-native';
 import {styles} from './../styles/styles.js'
+
+class GenreItem extends Component {
+ 
+  render() {
+ 
+    return (
+ 
+      <View style={{flexDirection: 'row'}}>           
+            <ImageBackground  style={styles.imageThumbnailTitles} source={{ uri: 'https://i.picsum.photos/id/111/80/80.jpg' }} >
+
+            </ImageBackground>                       
+
+          </View>
+ 
+    );
+  }
+}
 
 export class SelectGenresScreen extends React.Component {
     constructor(props) {
@@ -18,19 +35,21 @@ export class SelectGenresScreen extends React.Component {
     render() {
       return (
         <View style={styles.container}>  
-          <View style={{flexDirection: 'row'}}>
-           
+          <View style={{flexDirection: 'row'}}>           
             <ImageBackground  style={styles.imageThumbnailTitles} source={{ uri: 'https://i.picsum.photos/id/11/80/80.jpg' }} >
               <Text style={styles.loginText}>Action</Text>
-            </ImageBackground>
-                       
+            </ImageBackground>                       
               <CheckBox
                 value={this.state.action}
                 onChange={() => this.setState({ action: !this.state.action })}
               />
           </View>
   
-          <View style={{flexDirection: 'row'}}>
+
+          <GenreItem>
+
+          </GenreItem>
+          {/* <View style={{flexDirection: 'row'}}>
             <Text style={styles.loginText}>Adventure</Text>
             <ImageBackground  style={styles.imageThumbnailTitles} source={{ uri: 'https://i.picsum.photos/id/12/80/80.jpg' }} />
             <CheckBox
@@ -73,7 +92,7 @@ export class SelectGenresScreen extends React.Component {
               value={this.state.scifi}
               onChange={() => this.setState({ scifi: !this.state.scifi })}
             />
-          </View>
+          </View> */}
           
           <TouchableOpacity style={styles.loginBtn} 
             onPress={() => this.props.navigation.navigate('SelectNovel',
