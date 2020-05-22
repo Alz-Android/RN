@@ -69,7 +69,6 @@ export class SelectNovelScreen extends React.Component {
       console.log(DATA);
   
       return (
-
       
       <View style={styles.container2}> 
       
@@ -79,15 +78,15 @@ export class SelectNovelScreen extends React.Component {
           renderItem={({ item }) => (
             <TouchableHighlight onPress={() => this.props.navigation.navigate('ViewNovel', {thumbnail: item})} >
               <View style={{margin: 20 }}>
-                <Image style={styles.imageThumbnail} source={{ uri: item }} />
-                <Text></Text>
-               
+                <Image style={styles.imageThumbnail} source={{ uri: item }} />               
               </View>
             </TouchableHighlight>
           )} 
           renderSectionHeader={({ section: { title } }) => (
-            
+            <View style={{margin: 20 }}>
               <Text style={styles.genres}>{title}</Text>
+            </View>
+
           )}
         />
       </View>

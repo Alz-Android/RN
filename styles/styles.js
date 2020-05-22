@@ -77,6 +77,12 @@ export const styles = StyleSheet.create({
         height: 150,
         width: 220,
       },
+      imageThumbnailTitles: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 80,
+        width: 160,
+      },
       navBar: {
         height: 65,
         backgroundColor: 'white',
