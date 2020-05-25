@@ -1,23 +1,6 @@
-import React, { Component } from 'react';
 import { CheckBox, Text, View, ImageBackground, TouchableOpacity} from 'react-native';
 import {styles} from './../styles/styles.js'
-
-class GenreItem extends Component {
- 
-  render() {
- 
-    return (
- 
-      <View style={{flexDirection: 'row'}}>           
-            <ImageBackground  style={styles.imageThumbnailTitles} source={{ uri: 'https://i.picsum.photos/id/111/80/80.jpg' }} >
-
-            </ImageBackground>                       
-
-          </View>
- 
-    );
-  }
-}
+import {GenreItem} from './../components/GenreItem.js'
 
 export class SelectGenresScreen extends React.Component {
     constructor(props) {
@@ -33,8 +16,15 @@ export class SelectGenresScreen extends React.Component {
     }
   
     render() {
+      let inputProps={
+        url:'https://i.picsum.photos/id/111/80/80.jpg',
+        genre: 'Adventure'
+      };
+
       return (
         <View style={styles.container}>  
+          <GenreItem inputProps={inputProps}>
+          </GenreItem>
           <View style={{flexDirection: 'row'}}>           
             <ImageBackground  style={styles.imageThumbnailTitles} source={{ uri: 'https://i.picsum.photos/id/11/80/80.jpg' }} >
               <Text style={styles.loginText}>Action</Text>
@@ -46,9 +36,7 @@ export class SelectGenresScreen extends React.Component {
           </View>
   
 
-          <GenreItem>
 
-          </GenreItem>
           {/* <View style={{flexDirection: 'row'}}>
             <Text style={styles.loginText}>Adventure</Text>
             <ImageBackground  style={styles.imageThumbnailTitles} source={{ uri: 'https://i.picsum.photos/id/12/80/80.jpg' }} />
@@ -109,4 +97,4 @@ export class SelectGenresScreen extends React.Component {
         </View>
       )
     }
-  } 
+} 
