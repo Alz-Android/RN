@@ -1,3 +1,4 @@
+import React from 'react';
 import { CheckBox, Text, View, ImageBackground, TouchableOpacity} from 'react-native';
 import {styles} from './../styles/styles.js'
 import {GenreItem} from './../components/GenreItem.js'

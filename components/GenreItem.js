@@ -1,4 +1,6 @@
-import { Component,Text, View, ImageBackground,  } from 'react';
+import React, { Component } from 'react';
+import {Text, View, ImageBackground } from 'react-native';
+import {styles} from './../styles/styles.js'
 
 export class GenreItem extends Component { 
     render() {
