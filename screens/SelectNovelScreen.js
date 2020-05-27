@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, SectionList, FlatList, TouchableHighlight, Image  } from 'react-native';
+import {Text, View, SectionList, TouchableHighlight, Image  } from 'react-native';
 
 import {styles} from './../styles/styles.js'
 
