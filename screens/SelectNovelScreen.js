@@ -33,9 +33,7 @@ export class SelectNovelScreen extends React.Component {
             })
         }  
         
-        //     }
-
-    render() {
+     render() {
       const { navigation } = this.props;  
 
 
@@ -90,7 +88,6 @@ export class SelectNovelScreen extends React.Component {
           )}
         />
       </View>
-
       )
     }
   } 
